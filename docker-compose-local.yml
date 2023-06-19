@@ -4,8 +4,7 @@ services:
   config-server:
     image: petclinic-config-server:dev
     container_name: config-server
-    mem_limit: 512M
-    ports: 
+    mem_limit: 512M  
       - 8888:8888
 
   discovery-server:
