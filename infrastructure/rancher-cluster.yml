@@ -1,0 +1,24 @@
+nodes:
+  - address: 172.31.20.73              
+    internal_address: 172.31.20.73     
+    user: ubuntu
+    role:
+      - controlplane
+      - etcd
+      - worker
+
+
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
+
+ssh_key_path: ~/.ssh/petclinic-rancher.pem
+
+
+ingress:
+  provider: nginx
+  options:
+    use-forwarded-headers: "true"
